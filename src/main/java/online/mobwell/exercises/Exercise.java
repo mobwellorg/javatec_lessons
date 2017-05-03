@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
+
 import online.mobwell.util.PropertyValues;
 import online.mobwell.util.Util;
 
@@ -16,6 +17,7 @@ public abstract class Exercise {
 	private String date;
 	private String userId;
 	private double[] marks;
+	
 
 	private String executionError;
 
@@ -32,7 +34,7 @@ public abstract class Exercise {
 		this.userId = userId;
 		this.files = files;
 		this.date = Util.getDate();
-		marks = new double[4];
+		marks = new double[0];
 	}
 
 	/**
@@ -107,8 +109,8 @@ public abstract class Exercise {
 
 		String s="javac "+ filesdir + files.get(0).getFilename() + ".java > "+ errorsfile + " 2>&1";
 		try {
-//			String[] command = {"CMD", "/C", s};
-			String[] command = {"/bin/sh", "-c", s};
+		String[] command = {"CMD", "/C", s};
+	//	String[] command = {"/bin/sh", "-c", s};
 						
 			probuilder = new ProcessBuilder(command);
 
@@ -119,7 +121,7 @@ public abstract class Exercise {
 			 
 			// Wait for the shell to finish and get the return code
 			int shellExitStatus = shell.waitFor();
-			System.out.println("Exit status" + shellExitStatus);
+			//System.out.println("Exit status: " + shellExitStatus);
 			
 ///			String response = Util.convertStreamToStr(shellIn);
 			 

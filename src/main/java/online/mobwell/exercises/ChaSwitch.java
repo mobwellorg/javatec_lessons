@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import online.mobwell.exercises.module_4.Challenge_M04L01_1;
+import online.mobwell.exercises.module_4.*;
 
 public class ChaSwitch {
 
@@ -41,6 +41,7 @@ public class ChaSwitch {
 
 		switch (name) {
 			case "M04L01_1" : { ex_certo = new Challenge_M04L01_1(name, userId, arcode); break;}
+			case "M04L02_1" : { ex_certo = new Challenge_M04L02_1(name, userId, arcode); break;}
 		}
 
 		return new ChaSwitch(ex_certo);
