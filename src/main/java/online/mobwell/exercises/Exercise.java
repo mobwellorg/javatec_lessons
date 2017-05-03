@@ -44,9 +44,9 @@ public abstract class Exercise {
 
 
 	public String writeExecute() {
-		if (save2Disk()) {
-			return executionResult();
-		}
+		save2Disk();
+		executionResult();
+		
 
 		return "error saving file"; // TODO: Error code couldn't save file
 	}
@@ -109,8 +109,8 @@ public abstract class Exercise {
 
 		String s="javac "+ filesdir + files.get(0).getFilename() + ".java > "+ errorsfile + " 2>&1";
 		try {
-		String[] command = {"CMD", "/C", s};
-	//	String[] command = {"/bin/sh", "-c", s};
+	//	String[] command = {"CMD", "/C", s};
+		String[] command = {"/bin/sh", "-c", s};
 						
 			probuilder = new ProcessBuilder(command);
 
