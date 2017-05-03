@@ -43,9 +43,9 @@ public class Challenge_M04L02_1 extends Exercise {
 		String ex = executionResult();
 		
 	    String crit1 = "import equidae.(z|Z)ebra;";
-	    String crit2 = "import felinae.(t|T)iger;";
-		String crit3 = "import primate.(c|C)ebra;";
-		String crit4 = "import (.......)(.)(.....);\nimport (.......)(.)(.....);\nimport (.......)(.)(.....);";
+	    String crit2 = "import felidae.(t|T)iger;";
+		String crit3 = "import primate.(c|C)himp;";
+		String crit4 = "import (.......)(.)(.....); import (.......)(.)(.....); import (.......)(.)(.....);";
 		
 		if(ex!=null)
 		{current_criteria[0] = correct_criteria[0];}
@@ -56,14 +56,17 @@ public class Challenge_M04L02_1 extends Exercise {
 	    {current_criteria[1] = correct_criteria[1];	}
 
 	    pat = Pattern.compile(crit2);
+	    mat = pat.matcher(code);
 	    if(mat.find())
 	    {current_criteria[2] = correct_criteria[2];	}
 	    
 	    pat = Pattern.compile(crit3);
+	    mat = pat.matcher(code);
 	    if(mat.find())
 	    {current_criteria[3] = correct_criteria[3];	}
 		
 	    pat = Pattern.compile(crit4);
+	    mat = pat.matcher(code);
 	    if(mat.find())
 	    {current_criteria[4] = correct_criteria[4];		}
 	    
