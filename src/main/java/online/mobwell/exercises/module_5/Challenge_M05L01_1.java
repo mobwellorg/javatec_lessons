@@ -30,7 +30,7 @@ public class CH_M05L01 {
 ###TESTING STRING###
 
 {	"name": "M05L01_1",
-	"userId": "test",
+	"userId": "ID3",
 	"files": [{	"filename": "Cake",
 	"code": "public class CH_M05L01 {
     public static void main(String[] args) {
