@@ -44,6 +44,7 @@ public class ChaSwitch {
 			case "M04L01_1" : { ex_certo = new Challenge_M04L01_1(name, userId, arcode); break;}
 			case "M04L02_1" : { ex_certo = new Challenge_M04L02_1(name, userId, arcode); break;}
 			case "M05L01_1" : { ex_certo = new Challenge_M05L01_1(name, userId, arcode); break;}
+			case "M05L02_1" : { ex_certo = new Challenge_M05L02_1(name, userId, arcode); break;}
 		}
 
 		return new ChaSwitch(ex_certo);
