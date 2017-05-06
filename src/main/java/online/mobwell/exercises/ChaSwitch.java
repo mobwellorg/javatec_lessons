@@ -7,6 +7,8 @@ import org.json.JSONObject;
 
 import online.mobwell.exercises.module_4.*;
 import online.mobwell.exercises.module_5.*;
+import online.mobwell.exercises.module_6.*;
+//import online.mobwell.exercises.module_7.*;
 
 public class ChaSwitch {
 
@@ -46,6 +48,7 @@ public class ChaSwitch {
 			case "M05L01_1" : { ex_certo = new Challenge_M05L01_1(name, userId, arcode); break;}
 			case "M05L02_1" : { ex_certo = new Challenge_M05L02_1(name, userId, arcode); break;}
 			case "M05L03_1" : { ex_certo = new Challenge_M05L03_1(name, userId, arcode); break;}
+			case "M06L01_1" : { ex_certo = new Challenge_M06L01_1(name, userId, arcode); break;}
 		}
 
 		return new ChaSwitch(ex_certo);

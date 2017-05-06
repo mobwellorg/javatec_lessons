@@ -85,8 +85,8 @@ public class Challenge_M05L03_1 extends Exercise{
 	    
 		String ex 		= executionResult();
 		
-	    String crit1 	= "\"0\"(\\s\\s\\s|\\s\\s\\s\\s|\\s\\s|\\s| )result[-][-];";
-	    String crit2 	= "\"1\"(\\s\\s\\s|\\s\\s\\s\\s|\\s\\s|\\s| )result[+][+];";
+	    String crit1 	= "\"0\"(\\s\\s\\s|\\s\\s\\s\\s|\\s\\s|\\s| )(result[-][-]|[-][-]result);";
+	    String crit2 	= "\"1\"(\\s\\s\\s|\\s\\s\\s\\s|\\s\\s|\\s| )(result[+][+]|[+][+]result);";
 	    String crit3 	= "\"-1\"(\\s\\s\\s|\\s\\s\\s\\s|\\s\\s|\\s| )result(.|)=(.|)-(.|)result(.|);";
 
 		
