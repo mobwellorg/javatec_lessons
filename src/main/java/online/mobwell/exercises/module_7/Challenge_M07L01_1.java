@@ -40,7 +40,7 @@ import online.mobwell.exercises.TraineeCode;
 ###TESTING STRING###
 
 {	"name": "M07L01_1",
-	"userId": "ID8",
+	"userId": "ID7",
 	"files": [{	"filename": "Decision",
 	"code": "public class CH_M07L01 {
 
