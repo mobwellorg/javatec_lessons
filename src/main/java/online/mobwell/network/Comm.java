@@ -19,7 +19,7 @@ import online.mobwell.exercises.Exercise;
 public class Comm {
 	private ServerSocket serverSocket;
 
-	public static final int PORT = 15115;
+	public static final int PORT = 15114;
 
 	private ExecutorService executorService;
 
@@ -71,6 +71,7 @@ public class Comm {
 					JSONObject jobj = new JSONObject();
 
 					jobj.put("execution-error", ex.getExecutionError());
+					jobj.put("file-location", ex.getFilesdir());
 					jobj.put("results", ex.getMarks());
 
 					out.println(jobj.toString());

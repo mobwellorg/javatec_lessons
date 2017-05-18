@@ -18,6 +18,9 @@ public abstract class Exercise {
 	private String userId;
 	private double[] marks;
 	
+	String filesdir;
+	String errorsdir;
+	String errorsfile;
 
 	private String executionError;
 
@@ -57,9 +60,9 @@ public abstract class Exercise {
 
 	protected boolean save2Disk() {
 		PropertyValues properties = new PropertyValues();
-		String filesdir =(String) properties.getProp().get("javafilesdir") + "ex" + userId + "/";
-		String errorsdir = (String) properties.getProp().get("errorfilesdir");
-		String errorsfile  = errorsdir + "errors_" + userId + ".txt";
+		filesdir =(String) properties.getProp().get("javafilesdir") + "ex" + userId + "/";
+		errorsdir = (String) properties.getProp().get("errorfilesdir");
+		errorsfile  = errorsdir + "errors_" + userId + ".txt";
 		FileOutputStream fop = null;
 		File file;
 
@@ -221,6 +224,48 @@ public abstract class Exercise {
 	 */
 	public void setMarks(double[] marks) {
 		this.marks = marks;
+	}
+
+	/**
+	 * @return the filesdir
+	 */
+	public String getFilesdir() {
+		return filesdir;
+	}
+
+	/**
+	 * @param filesdir the filesdir to set
+	 */
+	public void setFilesdir(String filesdir) {
+		this.filesdir = filesdir;
+	}
+
+	/**
+	 * @return the errorsdir
+	 */
+	public String getErrorsdir() {
+		return errorsdir;
+	}
+
+	/**
+	 * @param errorsdir the errorsdir to set
+	 */
+	public void setErrorsdir(String errorsdir) {
+		this.errorsdir = errorsdir;
+	}
+
+	/**
+	 * @return the errorsfile
+	 */
+	public String getErrorsfile() {
+		return errorsfile;
+	}
+
+	/**
+	 * @param errorsfile the errorsfile to set
+	 */
+	public void setErrorsfile(String errorsfile) {
+		this.errorsfile = errorsfile;
 	}
 
 	/**
